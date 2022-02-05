@@ -15,12 +15,21 @@
 CLAW=$PWD
 echo In directory $CLAW checking out master and pulling from origin
 
-for repo in $CLAW pyclaw classic riemann amrclaw geoclaw clawutil visclaw
+for repo in pyclaw classic riemann amrclaw clawutil
 do
     cd $repo
     echo "In repository $repo"
     git checkout master
-    git pull origin master
+    #git pull origin master
+    cd $CLAW
+done
+
+for repo in $CLAW geoclaw visclaw
+do
+    cd $repo
+    echo "In repository $repo"
+    git checkout hueneme
+    #git pull origin master
     cd $CLAW
 done
 
