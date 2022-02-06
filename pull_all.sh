@@ -19,7 +19,7 @@ for repo in pyclaw classic riemann amrclaw clawutil
 do
     cd $repo
     echo "In repository $repo"
-    git clone https://github.com/clawpack/${repo}.git
+    git clone https://github.com/clawpack/${repo}.git .
     #git checkout master
     #git pull origin master
     cd $CLAW
