@@ -19,7 +19,8 @@ for repo in pyclaw classic riemann amrclaw clawutil
 do
     cd $repo
     echo "In repository $repo"
-    git checkout master
+    git clone https://github.com/clawpack/${repo}.git
+    #git checkout master
     #git pull origin master
     cd $CLAW
 done
@@ -28,6 +29,7 @@ for repo in $CLAW geoclaw visclaw
 do
     cd $repo
     echo "In repository $repo"
+    git clone https://github.com/willmayfield/${repo}.git .
     git checkout hueneme
     #git pull origin master
     cd $CLAW
