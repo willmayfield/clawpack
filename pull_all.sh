@@ -25,7 +25,7 @@ do
     cd $CLAW
 done
 
-for repo in $CLAW geoclaw visclaw
+for repo in geoclaw visclaw
 do
     cd $repo
     echo "In repository $repo"
